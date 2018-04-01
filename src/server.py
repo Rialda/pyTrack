@@ -1,26 +1,31 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, Blueprint
 
 app = Flask(__name__)
+
+from src.calls import twitter_call,fb_call, ig_call, g_call
 
 # @ signifies a decorator - for wrapping function and modifying it's behavior
 # @ map a url to a return value
 @app.route('/')
-@app.route('/<data_source>')
+@app.route('/api/<data_source>')
 def index(data_source=None):
-    return render_template("data.html", data_source=data_source)
+    twitter = twitter_call.twitter_api()
+    facebook = fb_call.facebook_api()
+    instagram = ig_call.instagram_api()
+    google = g_call.google_api()
+    return render_template("data.html", data_source=data_source, twitter=twitter, facebook=facebook, instagram=instagram, google=google)
 
 
-@app.route('/test')
-def test():
-    test_list = ["Item1", "Item2", "Item3"]
-    return render_template("test.html", test_list=test_list)
 
 
 @app.route('/terms', methods=['GET'])
 def terms():
     return jsonify({'iliLikeTerms':iliLikeTerms})
 
-
+@app.route('/terms/<string:term>', methods=['GET'])
+def returnTerm(term):
+    terms = [iliterm for iliterm in iliLikeTerms if iliterm['term'] == term ]
+    return jsonify({'term': terms[0]})
 
 
 iliLikeTerms = [
