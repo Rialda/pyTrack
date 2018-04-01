@@ -17,16 +17,19 @@
 
 {% if data_source=="Twitter" or data_source=="twitter" %}
     <h1> Data: <span id="twitter"> {{ data_source }}  </span> </h1>
-    <h2> something </h2>
+    {% extends "calls/twitter_call.html" %}
 
 {% elif data_source=="Facebook" or data_source=="facebook" %}
     <h1> Data:  <span id="fb"> {{ data_source }}  </span>  </h1>
+	{% extends "calls/facebook_call.html" %}
 
 {% elif data_source=="Instagram" or data_source=="instagram" %}
     <h1> Data:  <span id="ig"> {{ data_source }}  </span> </h1>
+	{% extends "calls/instagram_call.html" %}
 
 {% elif data_source=="Google" or data_source=="google" %}
     <h1> Data:  <span id="google"> {{ data_source }}  </span>  </h1>
+	{% extends "calls/google_call.html" %}
 
 {% else %}
     <h1> Collection </h1>
