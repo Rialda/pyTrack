@@ -1,7 +1,9 @@
 from flask import Flask, render_template, jsonify, Blueprint
 
+
 app = Flask(__name__)
 
+from src.watson import wdiscovery
 from src.calls import twitter_call,fb_call, ig_call, g_call
 
 # @ signifies a decorator - for wrapping function and modifying it's behavior
@@ -16,6 +18,10 @@ def index(data_source=None):
     return render_template("data.html", data_source=data_source, twitter=twitter, facebook=facebook, instagram=instagram, google=google)
 
 
+@app.route('/discovery')
+def discovery():
+    w_discover=wdiscovery.discover()
+    return render_template("watson_discovery.html", w_discover=w_discover)
 
 
 @app.route('/terms', methods=['GET'])
