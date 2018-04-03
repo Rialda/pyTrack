@@ -1,7 +1,7 @@
 from __future__ import print_function
 import json
 from watson_developer_cloud import NaturalLanguageUnderstandingV1
-from watson_developer_cloud.natural_language_understanding_v1 import Features, EntitiesOptions, KeywordsOptions, CategoriesOptions
+from watson_developer_cloud.natural_language_understanding_v1 import Features, EntitiesOptions, KeywordsOptions, CategoriesOptions, ConceptsOptions
 
 
 natural_language_understanding = NaturalLanguageUnderstandingV1(
@@ -11,9 +11,7 @@ natural_language_understanding = NaturalLanguageUnderstandingV1(
 
 def discover():
     response = natural_language_understanding.analyze(
-      text='IBM is an American multinational technology company '
-           'headquartered in Armonk, New York, United States, '
-           'with operations in over 170 countries.',
+      text='The plan is part of a concerted drive to move top artworks out of Parisian museums and around the country in doing so break down the “cultural segregation” with deprived areas.',
       features=Features(
         entities=EntitiesOptions(
           emotion=True,
@@ -25,14 +23,15 @@ def discover():
           limit=2)))
     print(json.dumps(response, indent=2))
     response2 = natural_language_understanding.analyze(
-        text='Bruce Banner is the Hulk and Bruce Wayne is BATMAN! '
-             'Superman fears not Banner, but Wayne.',
+        text='However, the minister was said to be reconsidering moving the Leonardo Da Vinci’s 16th century masterpiece after being shown an estimation of the costs of the move.',
         features=Features(entities=EntitiesOptions(), keywords=KeywordsOptions()))
 
     print(json.dumps(response2, indent=2))
     response3 = natural_language_understanding.analyze(
-      url='www.ibm.com',
+      url='https://www.telegraph.co.uk/news/2018/04/03/proposed-mona-lisa-grand-tour-france-could-cost-30m-warns-louvre/',
       features=Features(
-        categories=CategoriesOptions()))
+        categories=CategoriesOptions(),
+      concepts=ConceptsOptions(limit=3)))
 
     print(json.dumps(response3, indent=2))
+    return response3
