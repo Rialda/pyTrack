@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba5e777-6801-4852-8c73-dc7200a7340b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/watson/in.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/watson/in.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/watson/fileforoutputdata.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/watson/fileforoutputdata.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/watson/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/watson/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/watson/wdiscovery.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/watson/wdiscovery.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/watson/writingfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/watson/writingfile.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,8 +36,8 @@
       <file leaf-file-name="wdiscovery.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/watson/wdiscovery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+            <state relative-caret-position="21">
+              <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -215,14 +214,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07931262" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.19466145" side_tool="true" weight="0.26210827" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3298969" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.80533856" visible="true" weight="0.25255474" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.80533856" weight="0.25255474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32842416" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -568,8 +566,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/watson/wdiscovery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+        <state relative-caret-position="21">
+          <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>

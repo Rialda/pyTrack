@@ -22,7 +22,7 @@ def discover():
     return "todo"
 
 
-fileToRead="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/filewithdata.txt"
+fileToRead="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/test.txt"
 fileToWrite="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/fileforoutputdata.txt"
 
 def nlu():
