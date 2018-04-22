@@ -1,0 +1,13 @@
+def nlu():
+    testphrase2 = 'I am catching a flu now. This is plain awful, I feel terrible!!'
+    response2 = natural_language_understanding.analyze(
+        text=testphrase2,
+        features=Features(entities=EntitiesOptions(), keywords=KeywordsOptions(),
+                          categories=CategoriesOptions(), concepts=ConceptsOptions())
+        )
+    aaa = (json.dumps(response2, indent=2))
+    print (aaa)
+    bbb = json.loads(aaa)
+    single_thing = str(str(bbb['entities']))
+    nlu2(single_thing)
+    return response2

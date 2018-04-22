@@ -20,3 +20,8 @@ I am catching a flu now. This is plain awful, I feel terrible!!
 4
 4
 [{'score': 1.0, 'label': '/health and fitness/disease/cold and flu'}, {'score': 0.000580907, 'label': '/health and fitness/disease/epidemic'}, {'score': 0.000161171, 'label': '/health and fitness/disease'}]
+[{'score': 1.0, 'label': '/health and fitness/disease/cold and flu'}, {'score': 0.000580907, 'label': '/health and fitness/disease/epidemic'}, {'score': 0.000161171, 'label': '/health and fitness/disease'}]
+[{'type': 'HealthCondition', 'text': 'flu', 'relevance': 0.947424, 'count': 1}]
+[{'type': 'HealthCondition', 'text': 'flu', 'relevance': 0.947424, 'count': 1}]
+[]
+[]

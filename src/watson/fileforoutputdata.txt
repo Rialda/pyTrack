@@ -1,0 +1,7 @@
+[{'score': 0.999906, 'label': '/health and fitness/disease/cold and flu'}, {'score': 0.0128355, 'label': '/society/welfare/healthcare/hospital'}, {'score': 0.0025596, 'label': '/health and fitness/disease/cancer'}]
+[{'score': 0.997073, 'label': '/law, govt and politics/politics/elections'}, {'score': 0.060329, 'label': '/art and entertainment/movies and tv/reality'}, {'score': 0.0133571, 'label': '/real estate'}]
+Not enough data
+[{'score': 0.446828, 'label': '/technology and computing/consumer electronics/game systems and consoles/nintendo'}, {'score': 0.420613, 'label': '/hobbies and interests/games/lottery'}, {'score': 0.152363, 'label': '/sports/table tennis and ping-pong'}]
+[{'score': 0.982398, 'label': '/health and fitness/disease/allergies'}, {'score': 0.164538, 'label': '/health and fitness/disease/incontinence'}, {'score': 0.0638297, 'label': '/health and fitness/disease/asthma'}]
+[{'score': 0.707104, 'label': '/news'}, {'score': 0.707095, 'label': '/shopping/gifts'}, {'score': 0.000175105, 'label': '/shopping/retail/wholesalers'}]
+Not enough data

@@ -22,54 +22,30 @@ def discover():
     return "todo"
 
 
-testphrase = 'I am catching a flu now. This is plain awful, I feel terrible!!'
-
-
-response = natural_language_understanding.analyze(
-    text="something about some stuff",
-    features=Features(
-        entities=EntitiesOptions(
-            emotion=True,
-            sentiment=True,
-            limit=5),
-        keywords=KeywordsOptions(
-            emotion=True,
-            sentiment=True,
-            limit=5)))
-print(json.dumps(response, indent=2))
-
-response2 = natural_language_understanding.analyze(
-    text=testphrase,
-    features=Features(entities=EntitiesOptions(), keywords=KeywordsOptions(),
-                      categories=CategoriesOptions(), concepts=ConceptsOptions())
-)
-aaa = (json.dumps(response2, indent=2))
-print(aaa)
-bbb = json.loads(aaa)
-single_thing = str(bbb['usage']['text_characters'])
-
+fileToRead="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/filewithdata.txt"
+fileToWrite="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/fileforoutputdata.txt"
 
 def nlu():
-    testphrase2 = 'I am catching a flu now. This is plain awful, I feel terrible!!'
-    response2 = natural_language_understanding.analyze(
-        text=testphrase2,
-        features=Features(entities=EntitiesOptions(), keywords=KeywordsOptions(),
-                          categories=CategoriesOptions(), concepts=ConceptsOptions())
-        )
-    aaa = (json.dumps(response2, indent=2))
-    print (aaa)
-    bbb = json.loads(aaa)
-    single_thing = str(str(bbb['categories']))
-    nlu2(single_thing)
-
-    response3 = natural_language_understanding.analyze(
-        url='https://newsapi.org/v2/everything?q=influenza&sortBy=publishedAt&apiKey=4f3a2f68ac6c4de88cda6999cd7c25a9',
-        features=Features(
-            categories=CategoriesOptions(),
-            concepts=ConceptsOptions(limit=3)))
-
-    print(json.dumps(response3, indent=2))
-    return response2
+    g = open(fileToWrite, 'a')
+    f = open(fileToRead, 'r')
+    num_lines = sum(1 for line in open(fileToRead))
+    while num_lines!=0:
+        nline=f.readline()
+        newline = str(nline)
+        if len(newline)>15:
+            response2 = natural_language_understanding.analyze(
+            text=newline,
+            features=Features(entities=EntitiesOptions(), keywords=KeywordsOptions(), categories=CategoriesOptions(), concepts=ConceptsOptions())
+            )
+            aaa = (json.dumps(response2, indent=2))
+            print(aaa)
+            bbb = json.loads(aaa)
+            single_thing = (str(bbb['categories']))
+            g.write(single_thing+'\n')
+        else:
+            g.write("Not enough data"+'\n')
+        num_lines-=1
+    return num_lines
 
 
 def nlu2(the_result):
