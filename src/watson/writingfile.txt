@@ -1,0 +1,22 @@
+I am catching a flu now. This is plain awful, I feel terrible!!
+I am catching a flu now. This is plain awful, I feel terrible!!
+I am catching a flu now. This is plain awful, I feel terrible!!
+I am catching a flu now. This is plain awful, I feel terrible!!
+I am catching a flu now. This is plain awful, I feel terrible!!
+I am catching a flu now. This is plain awful, I feel terrible!!
+I am catching a flu now. This is plain awful, I feel terrible!!
+I am catching a flu now. This is plain awful, I feel terrible!!
+I am catching a flu now. This is plain awful, I feel terrible!!
+I am catching a flu now. This is plain awful, I feel terrible!!
+I am catching a flu now. This is plain awful, I feel terrible!!
+{'text_units': 1, 'text_characters': 63, 'features': 4}
+{'text_units': 1, 'text_characters': 63, 'features': 4}
+63
+63
+63
+4
+4
+4
+4
+4
+[{'score': 1.0, 'label': '/health and fitness/disease/cold and flu'}, {'score': 0.000580907, 'label': '/health and fitness/disease/epidemic'}, {'score': 0.000161171, 'label': '/health and fitness/disease'}]

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, Blueprint
+from flask import Flask, render_template, jsonify, request
 
 
 app = Flask(__name__)
@@ -18,10 +18,16 @@ def index(data_source=None):
     return render_template("data.html", data_source=data_source, twitter=twitter, facebook=facebook, instagram=instagram, google=google)
 
 
-@app.route('/discovery')
+@app.route('/wdiscovery', methods=['GET', 'POST'])
 def discovery():
-    w_discover=wdiscovery.discover()
-    return render_template("watson_discovery.html", w_discover=w_discover)
+    w_discover = wdiscovery.discover()
+    w_nlu = wdiscovery.nlu()
+    return render_template("watson_discovery.html", w_discover=w_discover, w_nlu=w_nlu)
+
+
+@app.route('/google_trends')
+def test():
+    return render_template("google_trends.html")
 
 
 @app.route('/terms', methods=['GET'])
