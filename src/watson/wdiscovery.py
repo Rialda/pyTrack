@@ -22,7 +22,7 @@ def discover():
     return "todo"
 
 
-fileToRead="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/finalTweets.txt"
+fileToRead="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/testfile.xlsx"
 fileToWrite="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/outCategories.csv"
 filetoFeel="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/keywordsSentimentEmotions.csv"
 
