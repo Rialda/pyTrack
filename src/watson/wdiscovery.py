@@ -22,11 +22,14 @@ def discover():
     return "todo"
 
 
-fileToRead="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/test.txt"
-fileToWrite="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/fileforoutputdata.txt"
+fileToRead="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/finalTweets.txt"
+fileToWrite="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/outCategories.csv"
+filetoFeel="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/keywordsSentimentEmotions.csv"
+
 
 def nlu():
-    g = open(fileToWrite, 'a')
+    #g = open(fileToWrite, 'a')
+    e = open(filetoFeel, 'a')
     f = open(fileToRead, 'r')
     num_lines = sum(1 for line in open(fileToRead))
     while num_lines!=0:
@@ -35,15 +38,19 @@ def nlu():
         if len(newline)>15:
             response2 = natural_language_understanding.analyze(
             text=newline,
-            features=Features(entities=EntitiesOptions(), keywords=KeywordsOptions(), categories=CategoriesOptions(), concepts=ConceptsOptions())
+            language='en',
+            features=Features(keywords=KeywordsOptions(emotion=True, sentiment=True, limit=2))
             )
             aaa = (json.dumps(response2, indent=2))
             print(aaa)
             bbb = json.loads(aaa)
-            single_thing = (str(bbb['categories']))
-            g.write(single_thing+'\n')
+           # single_thing = (str(bbb['categories']))
+            single_sentiment = (str(bbb['keywords']))
+           # g.write(single_thing+'\n')
+            e.write(single_sentiment+'\n')
         else:
-            g.write("Not enough data"+'\n')
+            #g.write("Not enough data"+'\n')
+            e.write("Not enough data"+'\n')
         num_lines-=1
     return num_lines
 
