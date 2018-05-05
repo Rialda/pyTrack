@@ -19,12 +19,12 @@ natural_language_understanding = NaturalLanguageUnderstandingV1(
 
 
 def discover():
-    return "todo"
+    return "Discovery"
 
 
-fileToRead="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/testfile.xlsx"
-fileToWrite="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/outCategories.csv"
-filetoFeel="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/keywordsSentimentEmotions.csv"
+fileToRead="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/filewithdata.txt"
+fileToWrite="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/fileforoutputdata.txt"
+filetoFeel="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/fileforoutputdata2.txt"
 
 
 def nlu():

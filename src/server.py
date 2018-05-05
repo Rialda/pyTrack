@@ -4,6 +4,8 @@ from flask import Flask, render_template, jsonify, request
 app = Flask(__name__)
 
 from src.watson import wdiscovery
+from src.ml_algorithms import classification, clustering
+from src.method import math_method
 from src.calls import twitter_call,fb_call, ig_call, g_call
 
 # @ signifies a decorator - for wrapping function and modifying it's behavior
@@ -23,6 +25,22 @@ def discovery():
     w_discover = wdiscovery.discover()
     w_nlu = wdiscovery.nlu()
     return render_template("watson_discovery.html", w_discover=w_discover, w_nlu=w_nlu)
+
+
+@app.route('/method')
+def method():
+    mmethod=math_method.math_method()
+    return render_template("method.html", mmethod=mmethod)
+
+
+@app.route('/clustering')
+def clustering():
+    return render_template("clustering.html")
+
+
+@app.route('/classification')
+def classification():
+    return render_template("classification.html")
 
 
 @app.route('/google_trends')
