@@ -28,7 +28,7 @@ filetoFeel="C:/Users/Rialda/PycharmProjects/pyTrack/src/watson/fileforoutputdata
 
 
 def nlu():
-    #g = open(fileToWrite, 'a')
+    g = open(fileToWrite, 'a')
     e = open(filetoFeel, 'a')
     f = open(fileToRead, 'r')
     num_lines = sum(1 for line in open(fileToRead))
@@ -39,14 +39,14 @@ def nlu():
             response2 = natural_language_understanding.analyze(
             text=newline,
             language='en',
-            features=Features(keywords=KeywordsOptions(emotion=True, sentiment=True, limit=2))
+            features=Features(keywords=KeywordsOptions(emotion=True, sentiment=True, limit=2),  categories=CategoriesOptions())
             )
             aaa = (json.dumps(response2, indent=2))
             print(aaa)
             bbb = json.loads(aaa)
-           # single_thing = (str(bbb['categories']))
+            single_thing = (str(bbb['categories']))
             single_sentiment = (str(bbb['keywords']))
-           # g.write(single_thing+'\n')
+            g.write(single_thing+'\n')
             e.write(single_sentiment+'\n')
         else:
             #g.write("Not enough data"+'\n')
