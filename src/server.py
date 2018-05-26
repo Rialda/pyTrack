@@ -39,8 +39,9 @@ def clustering():
 
 
 @app.route('/classification')
-def classification():
-    return render_template("classification.html")
+def classif():
+    classification_method=classification.classify()
+    return render_template("classification.html", classification_method=classification_method)
 
 
 @app.route('/google_trends')

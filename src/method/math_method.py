@@ -24,7 +24,7 @@ fileIliLabel="C:/Users/Rialda/PycharmProjects/pyTrack/src/method/ili_label.csv"
 def math_method():
     f_ili_label = open(fileIliLabel, 'a')
     f_likelihood = open(fileLikelihood, 'a')
-    with open('C:/Users/Rialda/PycharmProjects/pyTrack/src/method/testMethod.csv') as csvDataFile:
+    with open('C:/Users/Rialda/PycharmProjects/pyTrack/src/method/formula_features.csv') as csvDataFile:
         csvReader = csv.reader(csvDataFile)
         for row in csvReader:
             sentiment_score=row[0]
@@ -34,14 +34,19 @@ def math_method():
             emotion_fear=row[4]
             emotion_disgust=row[5]
             emotion_anger=row[6]
-            influenza=row[7]
-            sick=row[8]
-            flu=row[9]
-            headache=row[10]
-            sore_throat=row[11]
-            coughing=row[12]
-            fever=row[13]
-            runny_nose=row[14]
+
+            flu=row[7]
+            influenza=row[8]
+
+            sore_throat=row[9]
+            runny_nose=row[10]
+            fatigue=row[11]
+            sneezing=row[12]
+            coughing=row[13]
+            fever=row[14]
+            headache=row[15]
+
+
             if float(sentiment_score) < 0:
                 sentiment_value=3
             elif float(sentiment_score)==0:
@@ -50,10 +55,13 @@ def math_method():
                 sentiment_value=1
             else:
                 sentiment_value=0
-            keywords=[influenza, sick, flu]
+
+            keywords=[influenza, flu]
             no_of_keywords=keywords.count('1')
-            symptoms=[fever,coughing,sore_throat,runny_nose,headache]
+
+            symptoms=[sore_throat,runny_nose,fatigue,sneezing,coughing,fever,headache]
             no_of_symptoms=symptoms.count('1')
+
             if emotion_disgust!='0' and emotion_joy!='0' and emotion_joy!='0' and emotion_anger!='0' and emotion_fear!='0' and emotion_sadness!='0':
                 emotions=[emotion_anger,emotion_disgust,emotion_fear,emotion_joy,emotion_sadness]
                 max_emo=max(emotions)
